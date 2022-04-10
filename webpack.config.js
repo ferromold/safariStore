@@ -32,8 +32,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: ['@babel/polyfill', './index.js'],
-    analytics: './analytics.js'
+    main: ['@babel/polyfill', './index.js']
   },
   output: {
     filename: filename('js'),
@@ -68,6 +67,14 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/favicon.ico'),
           to: path.resolve(__dirname, 'dist')
+        },
+        {
+          from: path.resolve(__dirname, 'src/img/shop'),
+          to: path.resolve(__dirname, 'dist/img/shop')
+        },
+        {
+          from: path.resolve(__dirname, 'src/img/top-slider'),
+          to: path.resolve(__dirname, 'dist/img/top-slider')
         }
       ]
     }),
